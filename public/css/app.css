@@ -22,6 +22,8 @@
     --font-garamond:    'Cormorant Garamond', Georgia, serif;
     --font-sans:        'Inter', system-ui, sans-serif;
     --nav-height:       80px;
+    --marquee-height:   40px;
+    --header-total:     calc(var(--nav-height) + var(--marquee-height));
     --transition:       0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -312,7 +314,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 .hero-content {
     position: relative; z-index: 2;
     text-align: center;
-    padding: calc(var(--nav-height) + 40px) 20px 80px;
+    padding: calc(var(--header-total) + 40px) 20px 80px;
 }
 .hero-eyebrow {
     font-size: 0.72rem;
@@ -637,7 +639,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     min-height: 55vh;
     display: flex; align-items: center;
     overflow: hidden;
-    padding-top: var(--nav-height);
+    padding-top: var(--header-total);
 }
 .page-hero-bg {
     position: absolute; inset: 0;
@@ -1230,8 +1232,12 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     background: var(--color-gold);
     overflow: hidden;
     padding: 11px 0;
-    position: relative;
-    z-index: 999;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    z-index: 998;
+    height: var(--marquee-height);
 }
 .marquee-track {
     display: flex;
