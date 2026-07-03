@@ -53,7 +53,13 @@
         <div class="container-xl">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <div class="brand-container">
-                    <img src="{{ asset('images/logo-navbar.png') }}" alt="La Locanda del Carrettiere" class="brand-logo-img">
+                    <div class="brand-container">
+                        <img src="{{ asset('images/logo-navbar.png') }}" alt="La Locanda del Carrettiere" class="brand-logo-img">
+                        <div class="brand-text">
+                            <span class="brand-main">La Locanda</span>
+                            <span class="brand-sub">del Carrettiere</span>
+                        </div>
+                    </div>
                 </div>
             </a>
 
