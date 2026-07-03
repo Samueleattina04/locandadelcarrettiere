@@ -1216,16 +1216,8 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 }
 
 /* ── Advanced Animations ── */
-
-/* Hero initial states for GSAP */
-.hero-eyebrow,
-.hero-title,
-.hero-subtitle,
-.hero-actions,
-.hero-scroll-hint {
-    opacity: 0;
-    transform: translateY(30px);
-}
+/* Nota: gli stati iniziali (opacity:0) sono impostati via gsap.set() in JS,
+   NON in CSS — così il contenuto resta visibile se JS fallisce. */
 
 /* Canvas particles */
 #hero-canvas {
@@ -1273,19 +1265,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     transform-origin: center;
 }
 
-/* Stagger cards container */
-.stagger-cards .specialty-card,
-.stagger-cards .testimonial-card,
-.stagger-cards .value-card {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-/* Highlight cards */
-.highlight-card {
-    opacity: 0;
-    transform: translateY(60px);
-}
+/* Stagger/highlight initial states → gestiti via gsap.set() in JS */
 
 /* WhatsApp Float */
 .whatsapp-float {
@@ -1332,11 +1312,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     display: inline-block;
 }
 
-/* Clip-path section title initial state */
-.section-title {
-    clip-path: inset(0 100% 0 0);
-    opacity: 0;
-}
+/* section-title initial state → gestito via gsap.set() in JS */
 
 /* Enhanced specialty card hover */
 .specialty-card {
@@ -1382,11 +1358,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     text-shadow: 0 0 20px rgba(212,175,55,0.4);
 }
 
-/* Enhanced hero stats animation */
-.hero-stats {
-    opacity: 0;
-    transform: translateY(20px);
-}
+/* hero-stats initial state → gestito via gsap.set() in JS */
 
 /* Animated deco-rule */
 .deco-rule::before, .deco-rule::after {
