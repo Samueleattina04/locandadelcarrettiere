@@ -21,16 +21,14 @@
     </div>
 </section>
 
-<!-- Contact Info -->
+<!-- Recapiti + Mappa -->
 <section class="section-pad bg-dark-2">
     <div class="container-xl">
-        <div class="row g-5">
+        <div class="row g-5 align-items-start">
 
-            <!-- Left: Info & Hours -->
+            <!-- Recapiti -->
             <div class="col-lg-5" data-aos="fade-right">
-
-                <!-- Contact Details -->
-                <div class="contact-info-card mb-4">
+                <div class="contact-info-card">
                     <p class="section-eyebrow mb-4">Recapiti</p>
 
                     <div class="contact-detail">
@@ -74,10 +72,32 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Hours -->
+            <!-- Mappa -->
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.0!2d14.8385!3d37.7763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13159e2cfb3c97c5%3A0x8be2a9e7a37dde1!2sLa%20Locanda%20Del%20Carrettiere!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="La Locanda del Carrettiere - Mappa"
+                    ></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Orari di Apertura -->
+<section class="section-pad bg-dark">
+    <div class="container-xl">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up">
                 <div class="contact-info-card">
-                    <p class="section-eyebrow mb-4">Orari di Apertura</p>
+                    <p class="section-eyebrow mb-4" style="justify-content:center;">Orari di Apertura</p>
 
                     @php
                     $days_it = ['Monday' => 'Lunedì', 'Tuesday' => 'Martedì', 'Wednesday' => 'Mercoledì', 'Thursday' => 'Giovedì', 'Friday' => 'Venerdì', 'Saturday' => 'Sabato', 'Sunday' => 'Domenica'];
@@ -107,34 +127,26 @@
                         @endforeach
                     </table>
 
-                    <div style="margin-top:20px;padding:16px;background:rgba(212,175,55,0.05);border-left:2px solid var(--color-gold);">
+                    <div style="margin-top:24px;padding:16px;background:rgba(212,175,55,0.05);border-left:2px solid var(--color-gold);">
                         <p style="font-size:.82rem;color:var(--color-text-muted);margin:0;font-style:italic;">
                             <i class="fas fa-info-circle me-2" style="color:var(--color-gold);"></i>
                             Pizza disponibile solo Venerdì, Sabato e Domenica sera.
                         </p>
                     </div>
                 </div>
-
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Right: Map + Quick CTA -->
-            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
-
-                <!-- Map -->
-                <div class="map-container mb-4">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.0!2d14.8385!3d37.7763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13159e2cfb3c97c5%3A0x8be2a9e7a37dde1!2sLa%20Locanda%20Del%20Carrettiere!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="La Locanda del Carrettiere - Mappa"
-                    ></iframe>
-                </div>
-
-                <!-- Directions Card -->
-                <div style="background:rgba(255,255,255,.02);border:1px solid rgba(212,175,55,.12);padding:32px;">
-                    <p class="section-eyebrow mb-3">Come arrivare</p>
-                    <div class="row g-3">
+<!-- Come Arrivare -->
+<section class="section-pad-sm bg-dark-2">
+    <div class="container-xl">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up">
+                <div style="background:rgba(255,255,255,.02);border:1px solid rgba(212,175,55,.12);padding:40px;">
+                    <p class="section-eyebrow mb-4" style="justify-content:center;">Come arrivare</p>
+                    <div class="row g-4">
                         <div class="col-sm-6">
                             <div style="display:flex;gap:16px;align-items:flex-start;">
                                 <div class="contact-icon" style="flex-shrink:0;"><i class="fas fa-car"></i></div>
@@ -158,16 +170,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4">
+                    <div class="mt-4 text-center">
                         <a href="https://maps.google.com/?q=La+Locanda+Del+Carrettiere+Bronte" target="_blank" class="btn-gold-solid" style="font-size:.76rem;">
                             <i class="fas fa-directions"></i>
                             <span>Ottieni Indicazioni</span>
                         </a>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </section>

@@ -903,7 +903,6 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(212,175,55,0.12);
     padding: 40px;
-    height: 100%;
 }
 .contact-detail {
     display: flex;
