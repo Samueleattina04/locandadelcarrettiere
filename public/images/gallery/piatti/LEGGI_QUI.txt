@@ -1,0 +1,6 @@
+FOTO PIATTI — Galleria
+Inserire qui le foto dei piatti del menu.
+Formato: JPG o WebP, almeno 800x600px.
+Nomi suggeriti: antipasto-rustico.jpg, pasta-pistacchio.jpg, grigliata.jpg, cannolo.jpg, ecc.
+
+Poi aggiornare resources/views/pages/gallery.blade.php aggiungendo le immagini nell'array $images.

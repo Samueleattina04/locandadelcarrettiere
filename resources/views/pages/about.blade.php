@@ -111,15 +111,24 @@
         <div class="row g-5 justify-content-center">
             @php
             $team = [
-                ['initials' => 'G', 'name' => 'La Famiglia Gullotti', 'role' => 'La Cucina della Tradizione', 'bio' => 'Custodi delle ricette di famiglia, portano in tavola ogni giorno la memoria gastronomica della Sicilia più autentica, con ingredienti freschi e tecniche tramandate.'],
-                ['initials' => 'F', 'name' => 'Fabio Gullotto', 'role' => 'Pizzaiolo', 'bio' => 'Artista dell\'impasto, Fabio cura ogni venerdì, sabato e domenica sera la preparazione delle pizze con lievitazione naturale e farine selezionate.'],
+                ['initials' => 'G', 'name' => 'La Famiglia Gullotti', 'role' => 'La Cucina della Tradizione', 'bio' => 'Custodi delle ricette di famiglia, portano in tavola ogni giorno la memoria gastronomica della Sicilia più autentica, con ingredienti freschi e tecniche tramandate.', 'photo' => null],
+                ['initials' => 'F', 'name' => 'Fabio Gullotto', 'role' => 'Pizzaiolo', 'bio' => 'Artista dell\'impasto, Fabio cura ogni venerdì, sabato e domenica sera la preparazione delle pizze con lievitazione naturale e farine selezionate.', 'photo' => null],
             ];
             @endphp
             @foreach($team as $i => $member)
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ $i * 100 }}">
                 <div class="team-card">
                     <div class="team-photo">
-                        <div class="team-photo-placeholder">{{ $member['initials'] }}</div>
+                        @if(!empty($member['photo']))
+                            <img
+                                src="{{ $member['photo'] }}"
+                                alt="{{ $member['name'] }}"
+                                class="team-photo-img"
+                                loading="lazy"
+                            >
+                        @else
+                            <div class="team-photo-placeholder">{{ $member['initials'] }}</div>
+                        @endif
                     </div>
                     <h3 class="team-name">{{ $member['name'] }}</h3>
                     <p class="team-role">{{ $member['role'] }}</p>

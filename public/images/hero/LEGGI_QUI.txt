@@ -1,0 +1,8 @@
+FOTO HERO — Pagina principale
+Inserire qui la foto principale del locale (sala, tavoli apparecchiati, panorama con l'Etna).
+Formato consigliato: JPG, almeno 1920x1080px, qualità alta.
+Nome file: hero-bg.jpg
+
+Poi aggiornare in resources/views/pages/home.blade.php:
+Sostituire: url('https://images.unsplash.com/...')
+Con: url('/images/hero/hero-bg.jpg')

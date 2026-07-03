@@ -1,0 +1,7 @@
+FOTO DEL TEAM
+Inserire qui le foto dello staff del locale.
+Formato: JPG, almeno 400x400px (preferibilmente quadrata).
+Nomi: famiglia-gullotti.jpg, fabio-gullotto.jpg
+
+Poi aggiornare resources/views/pages/about.blade.php
+Nel team array, aggiungere 'photo' => '/images/team/nome-file.jpg' e usare <img> invece del placeholder.
