@@ -19,6 +19,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            set -e
             cd ~/locanda
             git pull origin main
             composer install --no-dev --optimize-autoloader --no-interaction
@@ -26,4 +27,12 @@ jobs:
             php artisan route:cache
             php artisan view:cache
             chmod -R 775 storage bootstrap/cache
+
+            # Aggiorna gli asset in public_html
+            PUBHTML=~/domains/rosybrown-boar-509699.hostingersite.com/public_html
+            cp -r ~/locanda/public/css $PUBHTML/
+            cp -r ~/locanda/public/js $PUBHTML/
+            cp -r ~/locanda/public/images $PUBHTML/
+            cp ~/locanda/public/favicon.ico $PUBHTML/
+
             echo "Deploy completato."
