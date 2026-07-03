@@ -24,6 +24,10 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="192x192" href="{{ asset('images/favicon-192.png') }}">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -50,12 +54,7 @@
             <a class="navbar-brand" href="{{ route('home') }}">
                 <div class="brand-container">
                     <span class="brand-icon">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="18" cy="18" r="17" stroke="#D4AF37" stroke-width="0.8"/>
-                            <path d="M18 6 C18 6, 26 12, 26 20 C26 25, 22.4 28, 18 28 C13.6 28, 10 25, 10 20 C10 12, 18 6, 18 6Z" fill="#D4AF37" opacity="0.15"/>
-                            <path d="M18 8 C18 8, 24 13, 24 20 C24 24, 21.3 26, 18 26 C14.7 26, 12 24, 12 20 C12 13, 18 8, 18 8Z" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
-                            <circle cx="18" cy="19" r="3" fill="#D4AF37"/>
-                        </svg>
+                        <img src="{{ asset('images/logo.jpeg') }}" alt="Logo La Locanda del Carrettiere" class="brand-logo-img">
                     </span>
                     <div class="brand-text">
                         <span class="brand-main">La Locanda</span>

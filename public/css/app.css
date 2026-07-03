@@ -211,6 +211,15 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 .navbar-brand { text-decoration: none; }
 .brand-container { display: flex; align-items: center; gap: 12px; }
 .brand-icon svg { display: block; }
+.brand-logo-img {
+    height: 52px;
+    width: auto;
+    display: block;
+    border-radius: 6px;
+    object-fit: contain;
+    background: #fff;
+    padding: 3px;
+}
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-main {
     font-family: var(--font-serif);
