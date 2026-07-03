@@ -216,7 +216,7 @@
                         <p>&copy; {{ date('Y') }} La Locanda del Carrettiere — P.IVA 05400350871</p>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <p>Powered by <a href="#" style="color:var(--color-gold);text-decoration:none;">Safix</a> – Samuele Attinà</p>
+                        <p>Powered by <a href="https://samueleattina.it" target="_blank" style="color:var(--color-gold);text-decoration:none;">Safix</a> – Samuele Attinà</p>
                     </div>
                 </div>
             </div>
