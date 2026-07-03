@@ -54,7 +54,7 @@
             <a class="navbar-brand" href="{{ route('home') }}">
                 <div class="brand-container">
                     <span class="brand-icon">
-                        <img src="{{ asset('images/logo.jpeg') }}" alt="Logo La Locanda del Carrettiere" class="brand-logo-img">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo La Locanda del Carrettiere" class="brand-logo-img">
                     </span>
                     <div class="brand-text">
                         <span class="brand-main">La Locanda</span>
