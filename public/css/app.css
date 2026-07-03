@@ -300,11 +300,8 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     background:
         linear-gradient(160deg, rgba(13,6,0,0.75) 0%, rgba(26,13,2,0.6) 50%, rgba(13,6,0,0.85) 100%),
         url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80') center/cover no-repeat;
-    transform: scale(1.05);
-    transition: transform 8s ease;
     will-change: transform;
 }
-.hero-section:hover .hero-bg { transform: scale(1.0); }
 .hero-particles {
     position: absolute; inset: 0;
     background-image:
@@ -524,8 +521,9 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     overflow: hidden;
     text-align: center;
     background:
-        linear-gradient(rgba(13,6,0,0.78), rgba(13,6,0,0.78)),
-        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80') center/cover fixed;
+        linear-gradient(rgba(13,6,0,0.82), rgba(13,6,0,0.82)),
+        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80') center/cover no-repeat;
+    /* background-attachment:fixed rimosso — causa jank su tutti i browser moderni */
 }
 .parallax-quote blockquote {
     font-family: var(--font-garamond);
