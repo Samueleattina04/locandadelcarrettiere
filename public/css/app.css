@@ -1214,3 +1214,201 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     .specialty-grid { grid-template-columns: 1fr; }
     .hero-actions { flex-direction: column; align-items: center; }
 }
+
+/* ── Advanced Animations ── */
+
+/* Hero initial states for GSAP */
+.hero-eyebrow,
+.hero-title,
+.hero-subtitle,
+.hero-actions,
+.hero-scroll-hint {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Canvas particles */
+#hero-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Marquee Strip */
+.marquee-strip {
+    background: var(--color-gold);
+    overflow: hidden;
+    padding: 11px 0;
+    position: relative;
+    z-index: 999;
+}
+.marquee-track {
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    width: max-content;
+}
+.marquee-track span {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+}
+.marquee-dot {
+    color: rgba(13,6,0,0.4) !important;
+    font-size: 0.5rem !important;
+}
+
+/* Image reveal wrapper */
+.reveal-image {
+    overflow: hidden;
+    position: relative;
+}
+.reveal-image img {
+    display: block;
+    width: 100%;
+    transform-origin: center;
+}
+
+/* Stagger cards container */
+.stagger-cards .specialty-card,
+.stagger-cards .testimonial-card,
+.stagger-cards .value-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Highlight cards */
+.highlight-card {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 12px 20px 12px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+    z-index: 800;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(80px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 56px;
+    overflow: hidden;
+}
+.whatsapp-float i { font-size: 1.3rem; flex-shrink: 0; }
+.whatsapp-float span { white-space: nowrap; overflow: hidden; opacity: 0; transition: opacity 0.3s; }
+.whatsapp-float.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.whatsapp-float:hover {
+    max-width: 300px;
+    background: #1da851;
+    box-shadow: 0 12px 40px rgba(37,211,102,0.45);
+}
+.whatsapp-float:hover span { opacity: 1; }
+
+/* Animated gradient border on section titles */
+.section-title.gradient-border {
+    position: relative;
+    display: inline-block;
+}
+
+/* Clip-path section title initial state */
+.section-title {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+}
+
+/* Enhanced specialty card hover */
+.specialty-card {
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+/* Enhanced testimonial card hover */
+.testimonial-card {
+    transform-style: preserve-3d;
+}
+
+/* Value card hover */
+.value-card {
+    transform-style: preserve-3d;
+}
+
+/* Floating glow effect on CTA */
+.cta-strip .btn-gold-solid {
+    position: relative;
+    box-shadow: 0 0 0 0 rgba(212,175,55,0);
+    animation: pulse-gold 3s ease-in-out infinite;
+}
+@keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.4); }
+    50% { box-shadow: 0 0 0 16px rgba(212,175,55,0); }
+}
+
+/* Animated underline on nav links */
+.nav-link::after {
+    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light), var(--color-gold));
+    background-size: 200%;
+}
+.nav-link:hover::after, .nav-link.active::after {
+    animation: shimmer-line 2s linear infinite;
+}
+@keyframes shimmer-line {
+    to { background-position: 200% center; }
+}
+
+/* Glowing border on active menu tab */
+.menu-tab-btn.active {
+    text-shadow: 0 0 20px rgba(212,175,55,0.4);
+}
+
+/* Enhanced hero stats animation */
+.hero-stats {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animated deco-rule */
+.deco-rule::before, .deco-rule::after {
+    animation: expand-line 1.5s ease forwards;
+    width: 0;
+}
+@keyframes expand-line {
+    to { width: 80px; }
+}
+
+/* Image hover scale on gallery */
+.gallery-item { perspective: 1000px; }
+
+/* Page hero parallax image */
+.page-hero-bg {
+    transform: scale(1.1);
+    transition: transform 8s ease;
+}
+
+/* Smooth section transitions */
+section { position: relative; }
+
+/* Scrollbar gold */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, var(--color-gold), var(--color-brown)); border-radius: 2px; }

@@ -27,6 +27,9 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -99,6 +102,36 @@
             </div>
         </div>
     </nav>
+
+    <!-- Marquee Strip -->
+    <div class="marquee-strip" id="marquee-strip">
+        <div class="marquee-track">
+            <span>Cucina Siciliana Autentica</span>
+            <span class="marquee-dot">✦</span>
+            <span>Pistacchio di Bronte DOP</span>
+            <span class="marquee-dot">✦</span>
+            <span>TripAdvisor Travelers' Choice 2018–2021</span>
+            <span class="marquee-dot">✦</span>
+            <span>Carni dei Nebrodi</span>
+            <span class="marquee-dot">✦</span>
+            <span>Vini Siciliani Selezionati</span>
+            <span class="marquee-dot">✦</span>
+            <span>Pizza a Lunga Lievitazione</span>
+            <span class="marquee-dot">✦</span>
+            <span>Cucina Siciliana Autentica</span>
+            <span class="marquee-dot">✦</span>
+            <span>Pistacchio di Bronte DOP</span>
+            <span class="marquee-dot">✦</span>
+            <span>TripAdvisor Travelers' Choice 2018–2021</span>
+            <span class="marquee-dot">✦</span>
+            <span>Carni dei Nebrodi</span>
+            <span class="marquee-dot">✦</span>
+            <span>Vini Siciliani Selezionati</span>
+            <span class="marquee-dot">✦</span>
+            <span>Pizza a Lunga Lievitazione</span>
+            <span class="marquee-dot">✦</span>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -198,11 +231,20 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 
     @yield('scripts')
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/390957721961" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Prenota su WhatsApp</span>
+    </a>
 </body>
 </html>

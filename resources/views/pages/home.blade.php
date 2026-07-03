@@ -6,6 +6,7 @@
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero-section">
+    <canvas id="hero-canvas"></canvas>
     <div class="hero-bg"></div>
     <div class="hero-particles"></div>
     <div class="texture-overlay"></div>
@@ -66,7 +67,7 @@
     <div class="container-xl">
         <div class="row align-items-center g-5">
             <div class="col-lg-5" data-aos="fade-right">
-                <div class="about-mini-image">
+                <div class="about-mini-image reveal-image">
                     <img
                         src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85"
                         alt="Interno della Locanda del Carrettiere"
@@ -110,7 +111,7 @@
             </p>
         </div>
     </div>
-    <div class="specialty-grid" data-aos="fade-up" data-aos-delay="150">
+    <div class="specialty-grid stagger-cards" data-aos="fade-up" data-aos-delay="150">
         @foreach($specialties as $i => $spec)
         <div class="specialty-card" data-aos="fade-up" data-aos-delay="{{ $i * 80 }}">
             <div class="specialty-icon">
@@ -153,7 +154,7 @@
     <div class="container-xl">
         <div class="row g-0 align-items-stretch">
 
-            <div class="col-lg-4" data-aos="fade-up">
+            <div class="col-lg-4 highlight-card" data-aos="fade-up">
                 <div style="
                     background: url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80') center/cover;
                     min-height: 400px;
@@ -168,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 highlight-card" data-aos="fade-up" data-aos-delay="100">
                 <div style="
                     background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80') center/cover;
                     min-height: 400px;
@@ -183,7 +184,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 highlight-card" data-aos="fade-up" data-aos-delay="200">
                 <div style="
                     background: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80') center/cover;
                     min-height: 400px;
@@ -211,7 +212,7 @@
         </div>
 
         <div class="swiper swiper-testimonials" data-aos="fade-up" data-aos-delay="100">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper stagger-cards">
                 @foreach($testimonials as $t)
                 <div class="swiper-slide">
                     <div class="testimonial-card h-100">
