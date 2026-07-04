@@ -1222,6 +1222,10 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
     .hero-title { font-size: clamp(2.5rem, 10vw, 4rem); }
     .specialty-grid { grid-template-columns: 1fr 1fr; }
     .menu-tab-btn { padding: 10px 14px; font-size: 0.7rem; }
+
+    /* Nasconde la marquee su mobile — causa overflow orizzontale su iOS */
+    .marquee-strip { display: none; }
+    :root { --marquee-height: 0px; }
 }
 @media (max-width: 480px) {
     .specialty-grid { grid-template-columns: 1fr; }
