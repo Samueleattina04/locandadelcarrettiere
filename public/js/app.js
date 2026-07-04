@@ -3,6 +3,20 @@
    GSAP 3 + ScrollTrigger + scroll nativo browser
    ================================================ */
 
+/* ── Blocca scroll orizzontale su mobile/iOS ── */
+(function() {
+    var startX = 0, startY = 0;
+    document.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }, { passive: true });
+    document.addEventListener('touchmove', function(e) {
+        var dx = Math.abs(e.touches[0].clientX - startX);
+        var dy = Math.abs(e.touches[0].clientY - startY);
+        if (dx > dy) e.preventDefault();
+    }, { passive: false });
+})();
+
 /* ── Failsafe: se GSAP non parte in 2s, tutto visibile ── */
 var failsafe = setTimeout(function () {
     document.querySelectorAll('[data-gsap-hidden]').forEach(function (el) {
