@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
-@section('page-title', 'La Locanda del Carrettiere | Trattoria Siciliana a Bronte – Cucina Autentica')
-@section('meta-description', 'La Locanda del Carrettiere a Bronte (CT): trattoria siciliana autentica con specialità al pistacchio di Bronte DOP, carni dei Nebrodi e pizza a lunga lievitazione. TripAdvisor Travelers\' Choice 2018–2021.')
+@section('title', 'La Locanda del Carrettiere')
+
+@section('meta-description')
+La Locanda del Carrettiere a Bronte (CT): trattoria siciliana autentica con specialità al pistacchio di Bronte DOP, carni dei Nebrodi e pizza a lunga lievitazione. TripAdvisor Travelers' Choice 2018–2021.
+@endsection
+
 @section('og-title', 'La Locanda del Carrettiere | Trattoria Siciliana a Bronte')
-@section('og-description', 'Sapori autentici tra l\'Etna e i Nebrodi. Cucina tradizionale siciliana, pistacchio di Bronte DOP, carni grigliate e pizza artigianale.')
+
+@section('og-description')
+Sapori autentici tra l'Etna e i Nebrodi. Cucina tradizionale siciliana, pistacchio di Bronte DOP, carni grigliate e pizza artigianale.
+@endsection
 
 @section('content')
 

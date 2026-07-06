@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@yield('meta-description', 'La Locanda del Carrettiere – Trattoria siciliana a Bronte, tra l\'Etna e i Nebrodi. Cucina tradizionale, antipasti rustici, pistacchio di Bronte DOP e carni grigliate.')">
+    <meta name="description" content="@yield('meta-description', 'La Locanda del Carrettiere – Trattoria siciliana a Bronte, tra Etna e Nebrodi. Cucina tradizionale, pistacchio di Bronte DOP e carni grigliate.')">
     <meta name="keywords" content="@yield('meta-keywords', 'trattoria siciliana, Bronte, pistacchio, Etna, cucina tradizionale, ristorante, locanda, carrettiere')">
     <meta name="robots" content="index, follow">
     <meta name="author" content="La Locanda del Carrettiere">
@@ -13,7 +13,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="@yield('og-title', 'La Locanda del Carrettiere | Trattoria Siciliana – Bronte')">
-    <meta property="og:description" content="@yield('og-description', 'Sapori autentici tra l\'Etna e i Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.')">
+    <meta property="og:description" content="@yield('og-description', 'Sapori autentici tra Etna e Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.')">
     <meta property="og:type" content="restaurant">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
@@ -26,10 +26,10 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('og-title', 'La Locanda del Carrettiere | Trattoria Siciliana – Bronte')">
-    <meta name="twitter:description" content="@yield('og-description', 'Sapori autentici tra l\'Etna e i Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.')">
+    <meta name="twitter:description" content="@yield('og-description', 'Sapori autentici tra Etna e Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.')">
     <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
 
-    <title>@hasSection('page-title')@yield('page-title')@else@yield('title', 'La Locanda del Carrettiere') | Trattoria Siciliana – Bronte@endif</title>
+    <title>@yield('title', 'La Locanda del Carrettiere') | Trattoria Siciliana – Bronte</title>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
