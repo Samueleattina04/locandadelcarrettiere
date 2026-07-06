@@ -22,6 +22,8 @@ $commands = [
     "cp -r $locanda/public/js $pubhtml/ 2>&1",
     "cp -r $locanda/public/images $pubhtml/ 2>&1",
     "cp $locanda/public/favicon.ico $pubhtml/ 2>&1",
+    "cp $locanda/public/sitemap.xml $pubhtml/ 2>&1",
+    "cp $locanda/public/robots.txt $pubhtml/ 2>&1",
 ];
 
 $log = date('Y-m-d H:i:s') . " — Deploy avviato\n";

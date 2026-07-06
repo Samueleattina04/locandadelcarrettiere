@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Contatti')
+@section('meta-description', 'Contatta La Locanda del Carrettiere a Bronte (CT): telefono, WhatsApp, email e indicazioni stradali. Prenota il tuo tavolo in Contrada Cantera snc, 95034 Bronte.')
+@section('og-title', 'Contatti & Prenotazioni | La Locanda del Carrettiere – Bronte')
+@section('og-description', 'Prenota il tuo tavolo: chiama al 095 7721961 o scrivici su WhatsApp. Siamo a Bronte, Contrada Cantera snc, ai piedi dell\'Etna. Aperto ogni giorno tranne martedì.')
 
 @section('content')
 
