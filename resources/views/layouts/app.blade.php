@@ -32,6 +32,7 @@
     <title>@yield('title', 'La Locanda del Carrettiere') | Trattoria Siciliana – Bronte</title>
 
     <!-- Schema.org JSON-LD -->
+    @verbatim
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -79,6 +80,7 @@
         ]
     }
     </script>
+    @endverbatim
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
