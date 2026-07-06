@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Chi Siamo')
+@section('meta-description', 'La storia de La Locanda del Carrettiere: una famiglia siciliana che dal cuore di Bronte porta in tavola la tradizione culinaria dell\'Etna e dei Nebrodi, con ingredienti locali e passione autentica.')
+@section('og-title', 'Chi Siamo | La Locanda del Carrettiere – Trattoria Siciliana Bronte')
+@section('og-description', 'Scopri la storia e i valori de La Locanda del Carrettiere a Bronte: tradizione siciliana, ingredienti locali di qualità e l\'ospitalità genuina del territorio etneo.')
 
 @section('content')
 

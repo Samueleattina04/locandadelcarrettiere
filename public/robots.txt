@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /.env
+
+Sitemap: https://lalocandadelcarrettierebronte.it/sitemap.xml

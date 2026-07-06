@@ -34,5 +34,7 @@ jobs:
             cp -r ~/locanda/public/js $PUBHTML/
             cp -r ~/locanda/public/images $PUBHTML/
             cp ~/locanda/public/favicon.ico $PUBHTML/
+            cp ~/locanda/public/sitemap.xml $PUBHTML/
+            cp ~/locanda/public/robots.txt $PUBHTML/
 
             echo "Deploy completato."

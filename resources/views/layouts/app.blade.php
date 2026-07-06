@@ -3,12 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="La Locanda del Carrettiere – Trattoria siciliana a Bronte, tra l'Etna e i Nebrodi. Cucina tradizionale, antipasti rustici, pistacchio di Bronte DOP e carni grigliate.">
-    <meta name="keywords" content="trattoria siciliana, Bronte, pistacchio, Etna, cucina tradizionale, ristorante, locanda">
-    <meta property="og:title" content="La Locanda del Carrettiere | Trattoria Siciliana – Bronte">
-    <meta property="og:description" content="Sapori autentici tra l'Etna e i Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.">
+    <meta name="description" content="@yield('meta-description', 'La Locanda del Carrettiere – Trattoria siciliana a Bronte, tra l\'Etna e i Nebrodi. Cucina tradizionale, antipasti rustici, pistacchio di Bronte DOP e carni grigliate.')">
+    <meta name="keywords" content="@yield('meta-keywords', 'trattoria siciliana, Bronte, pistacchio, Etna, cucina tradizionale, ristorante, locanda, carrettiere')">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="La Locanda del Carrettiere">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="@yield('og-title', 'La Locanda del Carrettiere | Trattoria Siciliana – Bronte')">
+    <meta property="og:description" content="@yield('og-description', 'Sapori autentici tra l\'Etna e i Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.')">
     <meta property="og:type" content="restaurant">
-    <title>@yield('title', 'La Locanda del Carrettiere') | Trattoria Siciliana – Bronte</title>
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="La Locanda del Carrettiere – Trattoria siciliana a Bronte">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="La Locanda del Carrettiere">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og-title', 'La Locanda del Carrettiere | Trattoria Siciliana – Bronte')">
+    <meta name="twitter:description" content="@yield('og-description', 'Sapori autentici tra l\'Etna e i Nebrodi. Cucina tradizionale siciliana con il pistacchio di Bronte DOP.')">
+    <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
+
+    <title>@hasSection('page-title')@yield('page-title')@else@yield('title', 'La Locanda del Carrettiere') | Trattoria Siciliana – Bronte@endif</title>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "La Locanda del Carrettiere",
+        "description": "Trattoria siciliana autentica a Bronte, ai piedi dell'Etna. Specialità con pistacchio di Bronte DOP, carni dei Nebrodi e pizza a lunga lievitazione.",
+        "url": "https://lalocandadelcarrettierebronte.it",
+        "telephone": "+390957721961",
+        "email": "trattoriagullotti@gmail.com",
+        "vatID": "05400350871",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Contrada Cantera snc",
+            "addressLocality": "Bronte",
+            "addressRegion": "Catania",
+            "postalCode": "95034",
+            "addressCountry": "IT"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "37.7903",
+            "longitude": "14.8328"
+        },
+        "servesCuisine": ["Sicilian", "Italian"],
+        "priceRange": "€€",
+        "hasMap": "https://maps.google.com/?q=Contrada+Cantera+snc+95034+Bronte+CT",
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday"], "opens": "11:30", "closes": "14:30"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday"], "opens": "19:30", "closes": "22:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "11:30", "closes": "14:30"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "19:30", "closes": "22:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "11:30", "closes": "14:30"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "19:30", "closes": "23:30"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "11:30", "closes": "14:30"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "19:30", "closes": "23:45"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:30", "closes": "14:30"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "19:30", "closes": "23:30"}
+        ],
+        "image": "https://lalocandadelcarrettierebronte.it/images/og-image.jpg",
+        "award": "TripAdvisor Travelers' Choice 2018, 2019, 2020, 2021",
+        "sameAs": [
+            "https://www.facebook.com/locandadelcarrettiere",
+            "https://www.instagram.com/locandadelcarrettiere",
+            "https://www.tripadvisor.it/Restaurant_Review-g1059862-d3580920-Reviews-La_Locanda_del_Carrettiere-Bronte_Province_of_Catania_Sicily.html"
+        ]
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
