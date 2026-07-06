@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('title', 'Galleria')
-@section('meta-description', 'Galleria fotografica de La Locanda del Carrettiere a Bronte: immagini dei piatti tipici siciliani, dell\'ambiente rustico e del territorio etneo tra Etna e Nebrodi.')
+
+@section('meta-description')
+Galleria fotografica de La Locanda del Carrettiere a Bronte: immagini dei piatti tipici siciliani, dell'ambiente rustico e del territorio etneo tra Etna e Nebrodi.
+@endsection
+
 @section('og-title', 'Galleria | La Locanda del Carrettiere – Trattoria Siciliana Bronte')
-@section('og-description', 'Sfoglia la galleria di La Locanda del Carrettiere: piatti della tradizione siciliana, ambienti accoglienti e i paesaggi dell\'Etna e dei Nebrodi.')
+
+@section('og-description')
+Sfoglia la galleria di La Locanda del Carrettiere: piatti della tradizione siciliana, ambienti accoglienti e i paesaggi dell'Etna e dei Nebrodi.
+@endsection
 
 @section('content')
 

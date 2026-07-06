@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('title', 'Menu')
-@section('meta-description', 'Scopri il menu de La Locanda del Carrettiere a Bronte: antipasti siciliani, primi con pistacchio di Bronte DOP, carni dei Nebrodi, pizza a lunga lievitazione e dessert tradizionali.')
+
+@section('meta-description')
+Scopri il menu de La Locanda del Carrettiere a Bronte: antipasti siciliani, primi con pistacchio di Bronte DOP, carni dei Nebrodi, pizza a lunga lievitazione e dessert tradizionali.
+@endsection
+
 @section('og-title', 'Il Menu | La Locanda del Carrettiere – Trattoria Siciliana Bronte')
-@section('og-description', 'Antipasti siciliani, primi piatti con pistacchio DOP, secondi di carne dei Nebrodi, pizza artigianale e dolci tradizionali. Prenota il tuo tavolo a Bronte.')
+
+@section('og-description')
+Antipasti siciliani, primi piatti con pistacchio DOP, secondi di carne dei Nebrodi, pizza artigianale e dolci tradizionali. Prenota il tuo tavolo a Bronte.
+@endsection
 
 @section('content')
 
